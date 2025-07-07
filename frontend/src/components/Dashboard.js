@@ -42,7 +42,7 @@ function Dashboard() {
       {renderDashboard()}
       {role && role !== "INVALID" && (
         <button onClick={handleLogout} className="logout-button">
-          Logout
+          Logout button
         </button>
       )}
     </div>
