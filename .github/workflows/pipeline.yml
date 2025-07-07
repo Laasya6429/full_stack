@@ -39,7 +39,7 @@ jobs:
       - name: Build and push Django backend image
         uses: docker/build-push-action@v5
         with:
-          context: ./edtech_project
+          context: ./edu_tech
           file: ./backend/Dockerfile
           push: true
           tags: ${{ env.BACKEND_IMAGE }}:latest
