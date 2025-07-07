@@ -8,8 +8,8 @@ on:
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-  FRONTEND_IMAGE: yourusername/react-frontend
-  BACKEND_IMAGE: yourusername/django-backend
+  FRONTEND_IMAGE: laasya6429/react-frontend
+  BACKEND_IMAGE: laasya6429/django-backend
 
 jobs:
   build-and-deploy:
@@ -39,7 +39,7 @@ jobs:
       - name: Build and push Django backend image
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
+          context: ./edtech_project
           file: ./backend/Dockerfile
           push: true
           tags: ${{ env.BACKEND_IMAGE }}:latest
